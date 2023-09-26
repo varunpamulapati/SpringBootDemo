@@ -18,4 +18,9 @@ public class SpringBootDemoApplication {
 	{
 		return String.format("Hello %s!", name);
 	}
+
+	@GetMapping("/primes")
+	public int primeNumbers(@RequestParam(value = "n", defaultValue = "10") int N) {
+		return N;
+	}
 }
